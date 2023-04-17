@@ -1,15 +1,20 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+IDOOG
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Engenharia de Software
 
 ## Participantes
-
-......  COLOQUE AQUI O SEU TEXTO ......
+Os membros são: 
+ - Bruno Henrique Figuereido Guanabarino Penna Lopes
+ - Lucas Ferreira Garcia
+ - Maisa Pires de Andrade
+ - Miguel Vieira de Souza
+ - Pedro Henrique Dias Camara
+ - Rafael Amaral Avelar
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 >
@@ -53,10 +58,12 @@
 
 
 # Introdução
+No Brasil, temos aproximadamente 200 mil animais de rua que foram resgatados pelas organizações não governamentais (ONGs). Existem cerca de 370 ONGs que estão em atuação no Brasil.
 
+Diante dessa informação, percebemos que as ONGs estão sofrendo por superlotação, pois quando ocorreu a pandemia devido ao vírus COVID-19 houve um crescimento no abandono de animais devido a problemas econômicos. Ademais, pelo número grande de animais resgatados os voluntários utilizam grande parte de seu tempo livre para manter os cuidados, sendo assim ficam sem tempo para realizar os processos de publicar o animal que está disponível para adoção e realização de entrevistas entre outros procedimentos, Os voluntários também possuem uma vida fora da ONG, já que não sobrevivem com dinheiro arrecadado. Com isso acaba que pessoas que querem adotar não tem conhecimento de quais animais estão disponíveis, e quando não há saída de animais desses locais acontece a superlotação.
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+De acordo com as informações da introdução, o problema que se caracteriza é a dificuldade de realizar os procedimentos desde anunciar/cadastrar o animal para adoção até os processos para que o animal seja adotado, sejam eles entrevistas ou leitura de formulários
 
 > Nesse momento você deve apresentar o problema que a sua aplicação deve
 > resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -76,7 +83,7 @@
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O objetivo do projeto é criar um portal onde os voluntários cadastrem os animais de forma eficiente que apresente facilidade e simplicidade para otimizar o tempo do voluntário.
 
 > Aqui você deve descrever os objetivos do trabalho indicando que o
 > objetivo geral é desenvolver um software para solucionar o problema
@@ -89,7 +96,8 @@
 
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Após diversas conversas e convivência no dia a dia, percebemos que mesmo além de ajudar os animais precisamos ajudar quem ajuda os animais, ou seja os voluntários, criando algo que otimize o tempo deles estará sendo dado oportunidades para os animais encontrar um lar de maneira mais fácil e mais rápida.
+
 
 > Descreva a importância ou a motivação para trabalhar com esta aplicação
 > que você escolheu. Indique as razões pelas quais você escolheu seus
@@ -105,7 +113,10 @@
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+As pessoas mais afetadas são aquelas que são voluntárias de ONGs que estão com seu tempo curto para realizar o cadastro de animais para adoção e também todas aquelas pessoas que possuem interesse em adotar um animal.
+
+Desta forma, definimos nosso público alvo homens e mulheres entre 18 a 45 anos que são voluntários de uma ONG e estão com um curto período de tempo por causa de suas outras atividades ou pessoas que tem intenção em adotar algum animal.
+
 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
@@ -124,7 +135,8 @@
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
+A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi consolidada com a participação dos usuários em um trabalho de imersão feito pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.
+
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
