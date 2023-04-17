@@ -1,18 +1,20 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10767333&assignment_repo_type=AssignmentRepo)
 # Idoog
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O objetivo do projeto é criar um portal onde os voluntários cadastrem os animais de forma eficiente que apresente facilidade e simplicidade para otimizar o tempo do voluntário.
 
 ## Alunos integrantes da equipe
 
 * Bruno Henrique Figuereido Guanabarino Penna Lopes
+* Lucas Ferreira Garcia
 * Maisa Pires de Andrade
 * Miguel Vieira de Souza
-* Lucas Ferreira Garcia
+* Pedro Henrique Dias Camara
+* Rafael Amaral Avelar
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Amália Soares Vieira de Vasconcelos
 
 ## Instruções de utilização
 
