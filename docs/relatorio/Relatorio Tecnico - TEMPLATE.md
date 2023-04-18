@@ -95,7 +95,9 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 > **Personas**
 > 
-> ![Peter Peixera](images/Persona1.png)
+> ![Maria Luiza Garcia](images/Persona1.png)
+> **Proposta de Valor**
+> ![Proposta de Valor Maria](images/propostamaria)
 > 
 > Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
 >
