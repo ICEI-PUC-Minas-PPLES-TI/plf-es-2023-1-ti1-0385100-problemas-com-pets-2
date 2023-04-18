@@ -66,9 +66,9 @@ De acordo com as informações da introdução, o problema que se caracteriza é
 O objetivo do projeto é criar um portal onde os voluntários cadastrem os animais de forma eficiente que apresente facilidade e simplicidade para otimizar o tempo do voluntário.
 
 >Objetivos de destaque são:
->Permitir a criação de um formulário de pré-requisito para validar ou invalidar a pessoa interessada em adotar, assim otimizando a leitura.
->Fazer com que o interessado a adotar um animal realize um cadastro no site já contendo informações que ajudem os voluntários a entender qual tipo de pessoa estão lidando.
->Colocar a possibilidade de adotar animais fora de sua região, facilitando o encontro das ONGS com pessoas interessadas em adotar.
+> * Permitir a criação de um formulário de pré-requisito para validar ou invalidar a pessoa interessada em adotar, assim otimizando a leitura.
+> * Fazer com que o interessado a adotar um animal realize um cadastro no site já contendo informações que ajudem os voluntários a entender qual tipo de pessoa estão lidando.
+> * Colocar a possibilidade de adotar animais fora de sua região, facilitando o encontro das ONGS com pessoas interessadas em adotar.
 
 
 ## Justificativa
