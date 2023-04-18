@@ -138,8 +138,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ## Restrições
 
->**O projeto está restrito pelos itens apresentados na tabela a seguir.**
-
 > ![Restrições](images/restricao.png)
 
 
@@ -156,17 +154,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 
 > ![Wireframe](images/wireframe.png)
+>
 A barra de navegação se manterá no layout de todas as páginas, apresentando botões para levar a outras áreas do site. O footer também se manterá no layout, e apresenta informações de contato e redes sociais da empresa.
 Na página inicial é exposto um carrossel que será constantemente atualizado, apresentando os animais recém cadastrados para adoção, um aside com links para os sites oficiais de ONGs parceiras, cards com fotos dos animais adotados pelo site com seus donos e um botão no fim da página que leva para a parte do site onde os pets disponíveis são apresentados.
+>
 > ![Wireframe2](images/wireframe2.png)
+>
 Nessa página há painéis com fotos, informações básicas e links para os sites oficiais de ONGs, abrigos, petshops, entre outros parceiros; para que o usuário possa conhecer os colaboradores do projeto e saber mais do objetivo da Idoog.
+>
 > ![Wireframe3](images/wireframe3.png)
+>
 Essa é a página onde serão expostos os pets disponíveis para adoção, nela será possível filtrar a busca pelo animal ou idade, além de apresentar colunas de divisão entre aqueles que foram postos para adoção recentemente, filhotes e aqueles que já estão esperando por um lar há bastante tempo.
+>
 > ![Wireframe4](images/wireframe4.png)
+>
 Essa janela será um pop-up com informações gerais do pet e um botão que levará a um formulário caso exista interesse na adoção, uma janela como essa é criada para cada animal cadastrado.
+>
 > ![Wireframe5](images/wireframe5.png)
+>
 Nesta página, existe um painel  com perguntas frequentes para que o usuário possa encontrar  respostas para possíveis dúvidas com facilidade, também há um  outro painel com sobre a proposta de valor, missão, objetivos  e breve história da Idog.
+>
 > ![Wireframe6](images/wireframe6.png)
+>
 Essa é a página de perfil do usuário, onde é encontrado os dados usado pelo usuário no cadastro e um botão que leva a um formulário caso haja interesse do cliente em cadastrar seu pet, ou outro animal resgatado, para adoção.
 
 # Metodologia
