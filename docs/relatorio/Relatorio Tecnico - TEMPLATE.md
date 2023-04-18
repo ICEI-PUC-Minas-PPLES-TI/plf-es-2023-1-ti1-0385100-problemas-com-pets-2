@@ -96,13 +96,17 @@ As personas levantadas durante o processo de entendimento do problema são apres
 > **Personas**
 > 
 > ![Maria Luiza Garcia](images/Persona1.png)
-> **Proposta de Valor**
+> **Proposta de Valor Maria**
 > ![Proposta de Valor Maria](images/propostamaria)
 > 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
->
-> **Exemplo de Proposta de Valor**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Peter Peixera](images/Persona2.png)
+> **Proposta de Valor Peter**
+> ![Proposta de Valor Maria](images/propostapeter)
+> 
+> ![João Tomé de Souza](images/Persona3.png)
+> **Proposta de Valor Peter**
+> ![Proposta de Valor João](images/propostajoao)
+> 
 
 
 ## Histórias de Usuários
