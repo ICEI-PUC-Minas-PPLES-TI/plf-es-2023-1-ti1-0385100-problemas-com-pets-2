@@ -98,23 +98,26 @@ As personas levantadas durante o processo de entendimento do problema são apres
 > ![Maria Luiza Garcia](images/Persona1.png)
 >
 > **Proposta de Valor Maria**
+>
 > ![Proposta de Valor Maria](images/propostamaria.png)
 > 
 > ![Peter Peixera](images/Persona2.png)
 >
 > **Proposta de Valor Peter**
+>
 > ![Proposta de Valor Maria](images/propostapeter.png)
 > 
 > ![João Tomé de Souza](images/Persona3.png)
 >
 > **Proposta de Valor Peter**
+>
 > ![Proposta de Valor João](images/propostajoao.png)
 > 
 
 
 ## Histórias de Usuários
 
-> **Com base na análise das personas forma identificadas as seguintes histórias de usuários:**
+> **Com base na análise das personas foram identificadas as seguintes histórias de usuários:**
 >
 > ![História de Usuários](images/histusuario.png)
 >
@@ -125,175 +128,83 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+> ![Requisitos Funcionais](images/reqf.png)
 
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-> 
-> **Links Úteis**:
-> 
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+> ![Requisitos não Funcionais](images/reqnf.png)
 
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+>**O projeto está restrito pelos itens apresentados na tabela a seguir.**
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+> ![Restrições](images/retricao.png)
 
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
-
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
 
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
 > ![Exemplo de UserFlow](images/userflow.jpg)
 
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
-
+> ![Wireframe](images/wireframe.png)
+A barra de navegação se manterá no layout de todas as páginas, apresentando botões para levar a outras áreas do site. O footer também se manterá no layout, e apresenta informações de contato e redes sociais da empresa.
+Na página inicial é exposto um carrossel que será constantemente atualizado, apresentando os animais recém cadastrados para adoção, um aside com links para os sites oficiais de ONGs parceiras, cards com fotos dos animais adotados pelo site com seus donos e um botão no fim da página que leva para a parte do site onde os pets disponíveis são apresentados.
+> ![Wireframe2](images/wireframe2.png)
+Nessa página há painéis com fotos, informações básicas e links para os sites oficiais de ONGs, abrigos, petshops, entre outros parceiros; para que o usuário possa conhecer os colaboradores do projeto e saber mais do objetivo da Idoog.
+> ![Wireframe3](images/wireframe3.png)
+Essa é a página onde serão expostos os pets disponíveis para adoção, nela será possível filtrar a busca pelo animal ou idade, além de apresentar colunas de divisão entre aqueles que foram postos para adoção recentemente, filhotes e aqueles que já estão esperando por um lar há bastante tempo.
+> ![Wireframe4](images/wireframe4.png)
+Essa janela será um pop-up com informações gerais do pet e um botão que levará a um formulário caso exista interesse na adoção, uma janela como essa é criada para cada animal cadastrado.
+> ![Wireframe5](images/wireframe5.png)
+Nesta página, existe um painel  com perguntas frequentes para que o usuário possa encontrar  respostas para possíveis dúvidas com facilidade, também há um  outro painel com sobre a proposta de valor, missão, objetivos  e breve história da Idog.
+> ![Wireframe6](images/wireframe6.png)
+Essa é a página de perfil do usuário, onde é encontrado os dados usado pelo usuário no cadastro e um botão que leva a um formulário caso haja interesse do cliente em cadastrar seu pet, ou outro animal resgatado, para adoção.
 
 # Metodologia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O grupo começou o trabalho criando uma matriz de alinhamento CSD e montando uma entrevista em conjunto, por meio da aula presencial disponível e por rápidas reuniões online. Com as perguntas prontas, o grupo entrou em comunicação com uma ONG e buscou depoimentos de outras. Com essas informações o grupo montou uma persona esperada para o projeto. Todas informações adquiridas até esse ponto foram documentadas no aplicativo Miro. Para a construção da documentação do Sprint 1 o grupo dividiu as tarefas entre si e, quando completas, revisaram o projeto antes da entrega.
 
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+> **O grupo trabalhou em conjunto nos passos anteriores à construção do relatório técnico.**
+> - Bruno Henrique Figueiredo Lopes: Contexto do projeto
+> - Lucas Ferreira Garcia: Metodologia
+> - Maisa Pires de Andrade: Wireframe
+> - iguel Vieira de Souza: Wireframe
+> - Pedro Henrique Dias: Metodologia
+> - Rafael Amaral Avelar: Especificação do projeto
 
 
 ## Ferramentas
 
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
+|Processo de Design Thinkgin  | Miro |  https://miro.com/app/board/uXjVMYDTGtk=/ | 
+|Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385100-problemas-com-pets-2 | 
+|Protótipo Interativo | Figma | https://www.figma.com/file/HToAHSg4kucnQSuJqYZHkv/Untitled?node-id=0-1&t=OmUrxSFuAVxTtBIu-0 | 
+|Editor de código | Visual Studio Code | https://code.visualstudio.com | 
 
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+#> **Links Úteis - Hospedagem**:
+#> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
+#> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
+#> - [GoDady](https://br.godaddy.com/how-to)
+#> - [GitHub Pages](https://pages.github.com/)
 
 ## Controle de Versão
 
-......  COLOQUE AQUI O SEU TEXTO ......
+
 
 > Discuta como a configuração do projeto foi feita na ferramenta de
 > versionamento escolhida. Exponha como a gerência de tags, merges,
@@ -404,13 +315,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > as melhorias geradas a partir dos resultados obtidos nos testes.
 
 
-# Referências
+# Referências Bibliográficas
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+> A lista a seguir traz as referências utilizadas nesse projeto. são elas: 
+>  Instituto Pet Brasil,  o país tem 3,9 milhões de animais em condição de vulnerabilidade. 2019. 
+>  Disponível em: http://institutopetbrasil.com/imprensa/pais-tem-39-milhoes-de-animais-em-condicao-de-vulnerabilidade/#:~:text=O%20levantamento%20do%20Instituto%20Pet,mais%20de%20172%20mil%20animais.  Acesso em 15/04/2023.
+>
+>  Jane A, A. São mais de 20 anos nessa triste realidade, Instagram. 2022.
+>  Disponível em: https://www.instagram.com/reel/CqTDkpcjFMD/?igshid=YmMyMTA2M2Y= Acesso em 29/03/2023.
+>
