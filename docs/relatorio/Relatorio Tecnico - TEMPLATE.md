@@ -205,12 +205,6 @@ O grupo começou o trabalho criando uma matriz de alinhamento CSD e montando uma
 |Protótipo Interativo | Figma | https://www.figma.com/file/HToAHSg4kucnQSuJqYZHkv/Untitled?node-id=0-1&t=OmUrxSFuAVxTtBIu-0 | 
 |Editor de código | Visual Studio Code | https://code.visualstudio.com | 
 
-#> **Links Úteis - Hospedagem**:
-#> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-#> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-#> - [GoDady](https://br.godaddy.com/how-to)
-#> - [GitHub Pages](https://pages.github.com/)
-
 ## Controle de Versão
 
 
