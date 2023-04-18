@@ -95,7 +95,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 > **Personas**
 > 
-> ![Peter Peixera](images/persona.png)
+> ![Peter Peixera](images/Persona.png)
 > 
 > Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
 >
