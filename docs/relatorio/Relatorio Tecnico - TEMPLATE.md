@@ -140,7 +140,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 >**O projeto está restrito pelos itens apresentados na tabela a seguir.**
 
-> ![Restrições](images/retricao.png)
+> ![Restrições](images/restricao.png)
 
 
 
