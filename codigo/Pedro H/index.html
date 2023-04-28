@@ -18,62 +18,69 @@
 
     <div class="container">
         <div class="row" id="row1">
-            <div class="col-md-3" id=top-col1> <!--Row de barras de info--> <!--A barra de info sobre o dono foi descartada pois o dono tera uma conta com a info que aparecerá-->
-                <h3 style="margin-top: 25px;">
+            <div class="col-md-3" id=top-col1>
+                <h4>
                     Informações do pet
-                </h3>
+                </h4>
 
-                <div class = "input_group">
-                    <input type="text" class = "form-control" placeholder="Nome do pet">
-                </div>
-                <div class = "input_group">
-                    <input type="text" class = "form-control" placeholder="Endereço">
-                </div>
-                <div class = "input_group">
-                    <input type="text" class = "form-control" placeholder="Idade">
-                </div>
-                <select class="form-select" style="margin-top: 10px;">
-                    <option selected>Sexo</option>
-                    <option value="1">Macho</option>
-                    <option value="2">Femea</option>
-                </select>
-                <select class="form-select" style="margin-top: 10px;">
-                    <option selected>Seu pet é castrado?</option>
-                    <option value="1">Sim</option>
-                    <option value="2">Não</option>
-                </select>
-                <div class = "input_group" id = "descricao">
-                    <textarea type="text" class = "form-control" placeholder="O pet necessita alguma atenção especial(como medicamentos ou cuidado com uma alergia)? Se não deixe em branco"></textarea>
-                </div>
-                <div class = "input_group" id = "descricao">
-                    <textarea type="text" class = "form-control" placeholder="Escreva uma breve descrição sobre seu pet"></textarea>
-                </div>
 
-                <div style="margin-top: 10px;"> <!--Image input-->
-                    <h4>Images do pet:</h4>
-                    
-                    <div class="mb-4" style="margin-top: 20px;">
-                        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
-                        alt="example placeholder" style="width: 300px;" />
+                <form>
+                    <div class="input_group" type="submit" value="Submit">
+                        <label>Nome do pet</label>
+                        <input type="text" id="nome-pet" required />
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="btn btn-primary btn-rounded">
+
+                    <div>
+                        Sexo do pet
+                        <select class="form-select" id="sexo-pet">
+                            <option value="1">Macho</option>
+                            <option value="2">Femea</option>
+                        </select>
+                    </div>
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label>Endereço atual</label>
+                        <input type="text" id="endereco-pet" required />
+                    </div>
+
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label>Telefone de contato</label>
+                        <input type="text" id="telefone-pet" required />
+                    </div>
+
+                    <div>
+                        <label>Alguma alergia ou cuidado especial?</label>
+                        <textarea rows="3" id = cuidados-pet></textarea>
+                    </div>
+
+                    <div>
+                        <label>Escreva sobre o pet!</label>
+                        <textarea rows="5" id = "descricao-pet"></textarea>
+                    </div>
+
+                    <div>
+                        Fotos do pet!
+                        <div class="mb-4 d-flex">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" style="width: 200px;" id="img-placeholder"/>
+                        </div>
+                        <div>
                             <label class="form-label text-white m-1" for="customFile1">Choose file</label>
-                            <input type="file" class="form-control d-none" id="customFile1" />
+                            <input type="file" class="form-control" id="img-pet"/>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <button style="margin-top: 15px; width: 190px; height: 70px;">
-                        Publicar pet
-                    </button>
-                </div>
+
+                    <input type="submit" value="Submit" id ="submit"/>
+                </form>
+
+
 
             </div>
         </div>
     </div>
 
+    <script src="Script.js"></script>
 
 
 </body>
