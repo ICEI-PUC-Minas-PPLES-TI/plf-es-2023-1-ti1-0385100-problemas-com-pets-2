@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Boogaloo";
+    src: url("Assests\\font\\Boogaloo-Regular.ttf") format("truetype");
+}
+
+
+body{
+    background-image: url("Assests\\imgs\\bg.png");
+    background-color: #ffffcd;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url("Assests\\imgs\\container-bg.png");
+    background-color: aliceblue;    
+    border-radius: 40px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-family: "Boogaloo";
+}
+
+.top-col1{
+    width: auto;
+}
+.titulo-pag{
+    margin-top: 5%;
+    text-align: center;
+}
+.pet-capsule{
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.capsule-pet-img{
+  width: 80%;
+  height: 80%;
+}
+
+.conheca{
+    font-size: x-large;
+    margin-left: 10%;
+}
