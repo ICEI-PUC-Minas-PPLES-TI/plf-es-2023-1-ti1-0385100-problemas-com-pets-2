@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Boogaloo";
+  src: url("Assets\\font\\Boogaloo-Regular.ttf") format("truetype");
+}
+
+.login {
+  font-family: "Boogaloo";
+  text-align: center;
+  font-size: x-large;
+}
+
+.login-title{
+  font-family: "Boogaloo";
+  text-align: center;
+  font-size: xx-large;
+  margin-top: -10%;
+  margin-bottom: 5%;
+}
+.subbut{
+  margin-top: 10%;
+  width: 70%;
+  height: auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 12px;
+  background-image: url("Assets\\Images\\bg.png");
+}
+
+.mouth {
+  fill: none;
+  stroke: #243946;
+  stroke-width: 5px;
+  position: absolute;
+}
+
+
+.splorch-eye-r {
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(to top right, #116415, #1a9920);
+  border-radius: 50%;
+  position: absolute;
+  margin-right: -110px;
+  margin-top: -7px;
+  z-index: -1;
+}
+
+.splorch-eye-l {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 110px;
+  margin-top: -7px;
+  z-index: -1;
+  background-image: linear-gradient(to top right, #116415, #1a9920);
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 275px;
+  height: 490px;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: linear-gradient(to top right, #e9e5d8, #dedecf);
+}
+
+
+@media screen and (max-height: 500px) {
+  .center {
+    transition: transform 0.5s;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+
+.center .ear {
+  position: absolute;
+  top: -110px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background-color: #404040;
+}
+
+.center .ear.ear--left {
+  left: -135px;
+}
+
+.center .ear.ear--right {
+  right: -135px;
+}
+
+.center .face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  margin: 80px auto 10px;
+  --rotate-head: 0deg;
+  transform: rotate(var(--rotate-head));
+  transition: transform 0.2s;
+  transform-origin: center 20px;
+}
+
+.center .eye {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #1b2b34;
+}
+
+.center .eye.eye--left {
+  margin-right: 40px;
+}
+
+.center .eye.eye--right {
+  margin-left: 40px;
+}
+
+.center .eye .glow {
+  position: relative;
+  top: 3px;
+  right: -12px;
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: rotate(38deg);
+}
+
+.center .nose {
+  position: relative;
+  top: 30px;
+  transform: scale(1.1);
+}
+
+.center .nose .glow {
+  position: absolute;
+  top: 3px;
+  left: 32%;
+  width: 15px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #476375;
+}
