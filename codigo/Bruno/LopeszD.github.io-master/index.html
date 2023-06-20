@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idoog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row" id="animalCards">
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    fetch('https://jsonserver.lopeszd.repl.co/pets')
+      .then(response => response.json())
+      .then(data => {
+        const animalCardsContainer = document.getElementById('animalCards');
+        const maxCards = 3; 
+        const randomAnimals = getRandomElements(data, maxCards); 
+
+        randomAnimals.forEach(animal => {
+          const card = document.createElement('div');
+          card.classList.add('col-md-6', 'col-lg-4');
+          card.innerHTML = `
+            <div class="card">
+              <img src="${animal.imagem}" class="card-img-top img-fluid" alt="Imagem do ${animal.nome}">
+              <div class="card-body">
+                <h5 class="card-title">${animal.nome}</h5>
+                <p class="card-text">Cidade: ${animal.cidade}</p>
+                <p class="card-text">Espécie: ${animal.especie}</p>
+                <p class="card-text">Raça: ${animal.raça}</p>
+                <p class="card-text">Data de Nascimento: ${animal.data_nascimento}</p>
+                <a href="${animal.link}" class="btn btn-primary">Saber mais</a>
+              </div>
+            </div>
+          `;
+
+          animalCardsContainer.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Ocorreu um erro:', error);
+      });
+
+    function getRandomElements(array, count) {
+      const shuffled = array.sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    }
+  </script>
+</body>
+</html>
