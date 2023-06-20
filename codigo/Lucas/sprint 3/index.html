@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Avaliações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Avaliações</h2>
+        <div>
+            <label for="ongSelect">Qual Ong deseja avaliar:</label>
+            <select id="ongSelect">
+                <option value="ong1">Casa Mia</option>
+                <option value="ong2">Projeto Cãomer</option>
+                <option value="ong3">Casa dos Anjos</option>
+            </select>
+        </div>
+        <textarea id="commentBox" class="comment-box"></textarea>
+        <br>
+        <button onclick="enviarComentario()" class="button">Enviar</button>
+        <button onclick="verComentarios()" class="button">Ver Comentários</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

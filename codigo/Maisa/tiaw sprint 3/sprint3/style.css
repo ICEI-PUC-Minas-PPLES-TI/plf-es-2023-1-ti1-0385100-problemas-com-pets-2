@@ -1,0 +1,25 @@
+.card{
+    padding: 1vw;
+    margin: 3vw;
+    background-color: dodgerblue;
+}
+
+.container{
+    display: flex;
+
+}
+
+.img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.titulo-pag{
+    font-style: italic;
+    color:dodgerblue;
+}
+
+
+    

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+
+    <title>Detalhes</title>
+    
+        
+   
+</head>
+<body>
+    <div class="container">
+        <img class="photo" id="dogPhoto" src="" alt="Foto do Cachorro">
+        <h1 id="dogName"></h1>
+        <p><strong>Idade:</strong> <span id="dogAge"></span></p>
+        <p><strong>Raça:</strong> <span id="dogBreed"></span></p>
+        <p><strong>Descrição:</strong> <span id="dogDescription"></span></p>
+        <p><strong>Curiosidade:</strong> <span id="dogCuriosity"></span></p>
+    </div>
+
+    <script>
+        
+        var data = {
+            "foto": "chetos.jpg",
+            "nome": "Cheetos",
+            "idade": "Filhote",
+            "raça": "Terrier Brasileiro",
+            "descrição": "O Cheetos é um cachorro pequeno com o pelo marrom, ele é muito dócil e amoroso!",
+            "curiosidade": "O Cheetos gosta de ficar dentro de casa mas morre de medo de aspirador"
+        };
+
+       
+        document.getElementById("dogPhoto").src = data.foto;
+        document.getElementById("dogName").textContent = data.nome;
+        document.getElementById("dogAge").textContent = data.idade;
+        document.getElementById("dogBreed").textContent = data.raça;
+        document.getElementById("dogDescription").textContent = data.descrição;
+        document.getElementById("dogCuriosity").textContent = data.curiosidade;
+    </script>
+</body>
+</html>

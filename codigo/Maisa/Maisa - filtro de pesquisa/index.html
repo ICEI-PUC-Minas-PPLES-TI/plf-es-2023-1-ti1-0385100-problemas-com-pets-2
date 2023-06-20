@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDOOG - Filtro de pesquisa</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-10 d-flex flex-column">
+            <div class="row">
+                <div class="form" id="form">
+                    <fieldset>
+                        <legend class="titulo">Filtro de pesquisa</legend>
+                        <div class="mb-3">
+                            <select id="animalSelect" class="form-select" onchange="setAnimal()">
+                                <option></option>
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <select id="idadeSelect" class="form-select" onchange="setIdade()">
+                                <option></option>
+                                <option>Filhote</option>
+                                <option>Adulto</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select id="abrigoSelect" class="form-select" onchange="setAbrigo()" placeholder="Abrigos">
+                                <option></option>
+                                <option>Abrigo 1</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select id="racaSelect" class="form-select" onchange="setRaca()">
+                                <option></option>
+                                <option>Sem raça</option>
+                                <option>De raça</option>
+                            </select>
+                        </div>
+                        <button id="btn" type="button" class="btn btn-primary" onclick="clearAll()">Limpar</button>
+                        <button id="btnbuscar" type="button" class="btn btn-primary" onclick="checkSelectFields()">Buscar</button>
+                    </fieldset>
+                </div>
+                <div id="tela" class = "tela"></div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
+
+
+   
+
+
+
+</body>
+
+</html>

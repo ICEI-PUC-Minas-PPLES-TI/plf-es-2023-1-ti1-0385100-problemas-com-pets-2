@@ -1,0 +1,41 @@
+{
+    "card": {
+      "title": "Avaliações",
+      "content": [
+        {
+          "label": "Qual Ong deseja avaliar:",
+          "selectId": "ongSelect",
+          "options": [
+            {
+              "value": "ong1",
+              "text": "Casa Mia"
+            },
+            {
+              "value": "ong2",
+              "text": "Projeto Cãomer"
+            },
+            {
+              "value": "ong3",
+              "text": "Casa dos Anjos"
+            }
+          ]
+        },
+        {
+          "textareaId": "commentBox",
+          "textareaClass": "comment-box"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Enviar",
+          "onclick": "enviarComentario()",
+          "class": "button"
+        },
+        {
+          "label": "Ver Comentários",
+          "onclick": "verComentarios()",
+          "class": "button"
+        }
+      ]
+    }
+  }

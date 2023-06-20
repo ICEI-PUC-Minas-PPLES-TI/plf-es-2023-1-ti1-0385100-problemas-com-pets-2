@@ -1,0 +1,25 @@
+{
+    "cards": [
+      {
+        "image": "CasaMia.jpg",
+        "title": "Casa Mia",
+        "description": "A CASA MIA começou a funcionar em fevereiro de 2019, no apartamento de Saskia",
+        "button": "Veja Mais",
+        "link": "https://casamiabh.com.br"
+      },
+      {
+        "image": "Caomer.jpg",
+        "title": "Projeto Cãomer",
+        "description": "O Projeto Cãomer foi iniciado no ano de 2015 por uma moradora do bairro Jardim Canadá.",
+        "button": "Veja Mais",
+        "link": "https://projetocaomer.com.br/"
+      },
+      {
+        "image": "Casadosanjos.jpg",
+        "title": "Casa dos Anjos",
+        "description": "A Casa dos Anjos é uma organização de proteção animal fundada em 2012 em Macaé, RJ.",
+        "button": "Veja Mais",
+        "link": "https://casadosanjos.netlify.app/"
+      }
+    ]
+  }
