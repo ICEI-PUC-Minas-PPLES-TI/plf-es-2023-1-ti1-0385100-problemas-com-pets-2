@@ -7,6 +7,18 @@
   src: url("Assets\\font\\Boogaloo-Regular.ttf") format("truetype");
 }
 
+.btn-cadastro{
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.btn-cadastro-txt{
+  font-family: "Boogaloo";
+  font-size: larger;
+  text-decoration: none;
+  color: black;
+}
+
 .login {
   font-family: "Boogaloo";
   text-align: center;
