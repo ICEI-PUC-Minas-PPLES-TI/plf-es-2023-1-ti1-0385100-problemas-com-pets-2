@@ -4,6 +4,18 @@
 }
 
 
+.btn-cadastro{
+    margin-bottom: 10%;
+    margin-left: 20%;
+  }
+  
+  .btn-cadastro-txt{
+    font-family: "Boogaloo";
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+  }
+
 body{
     background-image: url("Assests\\imgs\\bg.png");
     background-color: #ffffcd;

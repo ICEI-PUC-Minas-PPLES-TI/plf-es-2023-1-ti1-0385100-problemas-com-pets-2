@@ -1,54 +1,41 @@
+function readJSONFile(filename, callback) { //ESSA FUNCIONAAA////
+    var file = new XMLHttpRequest();
 
-function ler_dados() {
-    let strDados = localStorage.getItem('db');
-    let objDados = {};
+    file.overrideMimeType("application/json");
+    file.open("GET", filename, true);
 
-    if (strDados) {
-        objDados = JSON.parse(strDados);
-    }
-    else {
-        objDados = {
-                Cadastros: [
-                    {
-                        "id":1,
-                        "usuario": "Usuario1",
-                        "senha": 1234
-                    },
-                    {
-                        "id":2,
-                        "usuario": "Usuario2",
-                        "senha": 2345
-                    },
-                    {
-                        "id":3,
-                        "usuario": "Usuario3",
-                        "senha": 4321
-                    },
-                    {
-                        "id":4,
-                        "usuario": "Usuario4",
-                        "senha": 9876
-                    }
-                ]
-        }
-    }
+    file.onreadystatechange = function() {
+      if (file.readyState === 4 && file.status == "200") {
+        callback(JSON.parse(file.responseText));
+      }
+};
 
-    return objDados;
-}
-
-function fazer_login() {
-    let objDados = ler_dados();
-
-    let strUsuario = document.getElementById('usuario').value;
-    let strSenha = document.getElementById('senha').value;
-
-    if(strUsuario in objDados.Cadastros){
-        alert("usuario tem");
-    }
-    if(strSenha in objDados.Cadastros){
-        alert("senha tem");
-    }
-
-}
-
-document.getElementById("submit").addEventListener("click", fazer_login);
+    file.send(null);
+  }
+  
+  function fazer_login(objDados) {
+    document.getElementById("submit").addEventListener("click", function() {
+      let strUsuario = document.getElementById('usuario').value;
+      let strSenha = document.getElementById('senha').value;
+    
+      console.log(objDados.Cadastros);
+      console.log(strUsuario);
+    
+      if (objDados.Cadastros.some(cadastro => cadastro.usuario === strUsuario)) {
+        alert("Usuário encontrado");
+      } else {
+        alert("Usuário não encontrado");
+      }
+    
+      if (objDados.Cadastros.some(cadastro => cadastro.senha === strSenha)) {
+        alert("Senha encontrada");
+      } else {
+        alert("Senha não encontrada");
+      }
+    });
+  }
+  
+  readJSONFile("dados.json", function(data) {
+    fazer_login(data);
+  });
+  
