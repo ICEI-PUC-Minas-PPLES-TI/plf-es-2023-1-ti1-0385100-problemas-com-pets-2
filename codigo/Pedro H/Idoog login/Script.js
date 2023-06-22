@@ -1,41 +1,74 @@
-function readJSONFile(filename, callback) { //ESSA FUNCIONAAA////
-    var file = new XMLHttpRequest();
 
-    file.overrideMimeType("application/json");
-    file.open("GET", filename, true);
+function ler_dados() {
+  let strDados = localStorage.getItem('db');
+  let objDados = {};
 
-    file.onreadystatechange = function() {
-      if (file.readyState === 4 && file.status == "200") {
-        callback(JSON.parse(file.responseText));
-      }
-};
-
-    file.send(null);
+  if (strDados) {
+      objDados = JSON.parse(strDados);
   }
-  
-  function fazer_login(objDados) {
-    document.getElementById("submit").addEventListener("click", function() {
-      let strUsuario = document.getElementById('usuario').value;
-      let strSenha = document.getElementById('senha').value;
-    
-      console.log(objDados.Cadastros);
-      console.log(strUsuario);
-    
-      if (objDados.Cadastros.some(cadastro => cadastro.usuario === strUsuario)) {
-        alert("Usuário encontrado");
-      } else {
-        alert("Usuário não encontrado");
+  else {
+      objDados = {
+              Cadastros: [
+                  {
+                      "id":1,
+                      "usuario": "Usuario1",
+                      "senha": 1234
+                  },
+                  {
+                      "id":2,
+                      "usuario": "Usuario2",
+                      "senha": 2345
+                  },
+                  {
+                      "id":3,
+                      "usuario": "Usuario3",
+                      "senha": 4321
+                  },
+                  {
+                      "id":4,
+                      "usuario": "Usuario4",
+                      "senha": 9876
+                  }
+              ]
       }
-    
-      if (objDados.Cadastros.some(cadastro => cadastro.senha === strSenha)) {
-        alert("Senha encontrada");
-      } else {
-        alert("Senha não encontrada");
-      }
-    });
   }
-  
-  readJSONFile("dados.json", function(data) {
-    fazer_login(data);
-  });
-  
+
+  return objDados;
+}
+
+function fazer_login() {
+  let objDados = ler_dados();
+
+  let strUsuario = document.getElementById('usuario').value;
+  let strSenha = document.getElementById('senha').value;
+  let usuario_encontrado = false;
+  let senha_enoctrada = false;
+
+  for (let i = 0; i < objDados.Cadastros.length; i++) {
+    if (objDados.Cadastros[i].usuario === strUsuario) {
+      usuario_encontrado = true;
+      break;
+    }
+  }
+
+  for (let i = 0; i < objDados.Cadastros.length; i++) {
+    if (objDados.Cadastros[i].senha == strSenha) {
+      senha_enoctrada = true;
+      break;
+    }
+  }
+
+  if (usuario_encontrado) {
+    alert("Usario encontrado!");
+  } else {
+    alert("Usario nao encontrado!");
+  }
+
+  if (senha_enoctrada) {
+    alert("Senha encontrada!");
+  } else {
+    alert("Senha nao encontrada!");
+  }
+}
+
+document.getElementById("submit").addEventListener("click", fazer_login);

@@ -1,42 +1,42 @@
 
 function ler_dados() {
-    let strDados = localStorage.getItem('db');
-    let objDados = {};
+  let strDados = localStorage.getItem('db');
+  let objDados = {};
 
-    if (strDados) {
-        objDados = JSON.parse(strDados);
-    }
-    else {
-        objDados = {
-            Cadastros: [
-            ]
-        }
-    }
+  if (strDados) {
+      objDados = JSON.parse(strDados);
+  }
+  else {
+      objDados = {
+          Cadastros: [
+          ]
+      }
+  }
 
-    return objDados;
+  return objDados;
 }
 
 
 function salvaDados(dados) { 
-    localStorage.setItem('db', JSON.stringify(dados));
+  localStorage.setItem('db', JSON.stringify(dados));
 }
 
 function incluirCadastro() {
-    let objDados = ler_dados();
+  let objDados = ler_dados();
 
-    // Incluir um novo Cadastro
-    let strUsuario = document.getElementById('usuario').value;
-    let strSenha = (document.getElementById('senha').value == 1);
+  // Incluir um novo Cadastro
+  let strUsuario = document.getElementById('usuario').value;
+  let strSenha = document.getElementById('senha').value;
 
 
-    let novoCadastro = {
-        usuario: strUsuario,
-        senha: strSenha,
+  let novoCadastro = {
+      usuario: strUsuario,
+      senha: strSenha,
 
-    };
-    objDados.Cadastros.push(novoCadastro);
+  };
+  objDados.Cadastros.push(novoCadastro);
 
-    salvaDados(objDados);
+  salvaDados(objDados);
 
 }
 
