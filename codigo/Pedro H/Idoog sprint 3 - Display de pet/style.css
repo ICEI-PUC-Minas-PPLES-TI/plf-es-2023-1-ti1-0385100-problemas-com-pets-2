@@ -47,6 +47,8 @@ body{
 .capsule-pet-img{
   width: 80%;
   height: 80%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .conheca{

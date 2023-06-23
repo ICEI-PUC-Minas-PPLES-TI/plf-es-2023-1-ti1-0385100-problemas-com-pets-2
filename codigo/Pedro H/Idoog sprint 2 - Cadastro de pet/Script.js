@@ -28,6 +28,9 @@ function incluirContato() {
 
   
     let strNome = document.getElementById('nome-pet').value;
+    let strEspecie = document.getElementById('especie-pet').value;
+    let strNascimento = document.getElementById('nascimento-pet').value;
+    let strRaca = document.getElementById('raca-pet').value;
     let strSexo = (document.getElementById('sexo-pet').value == 1)?"M":"F";
     let strEndereco = document.getElementById('endereco-pet').value;
     let strTelefone = document.getElementById('telefone-pet').value;
@@ -37,6 +40,9 @@ function incluirContato() {
 
     let novoContato = {
         nome: strNome,
+        especie: strEspecie,
+        nascimento: strNascimento,
+        raca: strRaca,
         sexo: strSexo,
         telefone: strTelefone,
         endereco: strEndereco,

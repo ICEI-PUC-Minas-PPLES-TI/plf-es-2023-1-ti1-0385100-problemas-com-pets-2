@@ -37,7 +37,7 @@ function imprime_dados_2() {
         element.innerHTML = objDados.contatos[i].descricao;
 
         element = document.getElementById("info-" + i);
-        element.innerHTML = objDados.contatos[i].especie +" / "+ objDados.pets[i].idade + " / " + objDados.pets[i].raca;
+        element.innerHTML = objDados.contatos[i].especie + " / "+ "Nascido em: "+ objDados.contatos[i].nascimento + " / " + objDados.contatos[i].raca;
 
         element = document.getElementById("conheca-" + i);
         element.href = objDados.contatos[i].pag_pet;
