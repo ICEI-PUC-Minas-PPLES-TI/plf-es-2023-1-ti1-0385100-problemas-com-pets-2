@@ -1,30 +1,30 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Idoog
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Figueiredo Guanabarino Penna Lopes
+    given-names: Bruno Henrique
+  - family-names: Ferreira Garcia
+    given-names: Lucas
+  - family-names: Pires de Andrade
+    given-names: Maisa
+  - family-names: Vieira de Souza
+    given-names: Miguel
+  - family-names: Dias Camara
+    given-names: Pedro Henrique
+  - family-names: Amaral Avelar de Almendra Freitas
+    given-names: Rafaek
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amália
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
 keywords:
-  - 
-  - 
+  - Pets
+  - Adoção
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
