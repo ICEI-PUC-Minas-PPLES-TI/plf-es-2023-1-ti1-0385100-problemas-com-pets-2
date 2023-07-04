@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Adoção</title>
+</head>
+<body>
+  <style>
+    body{
+      background-color:khaki;
+    }
+    h1{
+      color:blue;
+    }
+    #formulario-container{
+      padding: 2rem;;
+    }
+    #formulario{
+      padding: 1rem;
+      
+    }
+    .botaoform{
+      width: 8rem;
+      height: 3rem;
+      margin: 1rem;
+      background-color: blue;
+    }
+  </style>
+  <div id="formulario-container">
+    <h1>Responda o formulário a baixo para adotar um de nossos amigos!</h1>
+    <form id="formulario">
+      <label for="pergunta1">Qual pet chamou atenção?</label>
+      <textarea id="pergunta1" name="pergunta1" rows="4" cols="50" required></textarea><br>
+
+      <label for="pergunta2">Você possui outro(s) pet(s) em casa?</label>
+      <textarea id="pergunta2" name="pergunta2" rows="4" cols="50" required></textarea><br>
+
+      <label for="pergunta3">Se a resposta anterior foi sim, quantos? Se respondeu não, digite não.</label>
+      <textarea id="pergunta3" name="pergunta3" rows="4" cols="50" required></textarea><br>
+
+      <label for="pergunta4">Digite sua média de renda mensal:</label>
+      <textarea id="pergunta4" name="pergunta4" rows="4" cols="50" required></textarea><br>
+
+      <label for="pergunta5">Conte brevemente sobre suas motivações para adotar este pet:</label>
+      <textarea id="pergunta5" name="pergunta5" rows="4" cols="50" required></textarea><br>
+
+      <input type="submit" value="Enviar" class="botaoform">
+    </form>
+  </div>
+
+  <script>
+    // Função chamada quando o formulário é enviado
+    function enviarFormulario(event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+
+      // Obter as respostas do formulário
+      var respostas = {
+        pergunta1: document.getElementById("pergunta1").value,
+        pergunta2: document.getElementById("pergunta2").value,
+        pergunta3: document.getElementById("pergunta3").value,
+        pergunta4: document.getElementById("pergunta4").value,
+        pergunta5: document.getElementById("pergunta5").value
+      };
+
+      // Exibir as respostas no console
+      console.log("Respostas do formulário:");
+      console.log(respostas);
+    }
+
+    // Adicionar um ouvinte de evento ao formulário
+    var formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", enviarFormulario);
+  </script>
+</body>
+</html>

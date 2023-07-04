@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de pets</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="row1">
+            <h1 class="titulo-pag">Pets</h1>
+            <div class="col-md-4" id="top-col1">
+                <!-- Cards de animais serão adicionados aqui -->
+            </div>
+
+        </div>
+        <button>
+            <a class="nav-link" href="paginicial.html">Voltar</a>
+            </button><button>
+            <a class="nav-link" href="cadastro.html">Cadastrar</a>
+        </button>
+    </div>
+
+    <script>
+        fetch('dados.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                const animalContainer = document.getElementById('top-col1');
+
+                let textdiv = '';
+                for (let i = 0; i < data.animal.length; i++) {
+                    const animal = data.animal[i];
+                    console.log(data.animal[i])
+                    textdiv += `
+                        <div class="card" >
+                            <img src="${animal.imagem}" class="capsule-pet-img" id="img-${i}">
+                                <h3 id="nome-${i}">${animal.nome}</h3>
+                                <h5 id="info-${i}">${animal.especie} / ${animal.raça}</h5>
+                                <a href="petsdetails.html?id=${animal.id}" class="btn btn-primary">Me conheça!</a>
+                        </div>`;
+                }
+                animalContainer.innerHTML = textdiv;
+            });
+            function sabermais(id) {
+  window.location.href = `petsdetails.html?id=${id}`;
+}
+    </script>
+</body>
+
+</html>
+
+<style>
+    .card {
+        width: 300px;
+        border: 0.5px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: rgb(241, 241, 119);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    ;
+
+    .btn-cadastro {
+        margin-bottom: 10%;
+        margin-left: 20%;
+    }
+
+    .btn-cadastro-txt {
+        font-family: "Boogaloo";
+        font-size: larger;
+        text-decoration: none;
+        color: black;
+    }
+
+
+    body {
+        background-image: url("assets\\imgs\\bg.png");
+        background-color: #ffffcd;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+
+
+    #top-col1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .titulo-pag {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .pet-capsule {
+        margin-bottom: 10%;
+        margin-top: 5%;
+    }
+
+    .capsule-pet-img {
+        width: 80%;
+        height: 80%;
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .conheca {
+        font-size: x-large;
+        margin-left: 10%;
+    }
+    .nav-link{
+        width:3rem;
+        margin: 1rem;
+    }
+</style>

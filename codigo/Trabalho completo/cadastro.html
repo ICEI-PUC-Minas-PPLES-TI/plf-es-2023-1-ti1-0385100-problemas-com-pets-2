@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale = 1.0">
+    <title>Cadastro de pets</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="row" id="row1">
+            <div class="col-md-4" id=top-col1>
+                <h4 class = "titulo-pag">
+                    Informações do pet
+                </h4>
+                <form class = "inputs">
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text">Nome do pet</label>
+                        <input type="text" id="nome-pet" class = "input-boxes" required />
+                    </div>
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text">Especie do pet</label>
+                        <input type="text" id="especie-pet" class = "input-boxes" required />
+                    </div>
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text">Data de nascimento do pet</label>
+                        <input type="text" id="nascimento-pet" class = "input-boxes" required />
+                    </div>
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text">Raça do pet </label>
+                        <input type="text" id="raca-pet" class = "input-boxes" required />
+                    </div>
+
+                    <div>
+                        <div class = "input-text" >Sexo do pet</div>
+                        <select class="form-select" id="sexo-pet">
+                            <option value="1" >Macho</option>
+                            <option value="2" >Femea</option>
+                        </select>
+                    </div>
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text" >Endereço atual</label>
+                        <input type="text" id="endereco-pet" required class = "input-boxes" />
+                    </div>
+
+
+                    <div class="input_group" type="submit" value="Submit">
+                        <label class = "input-text" >Telefone de contato</label>
+                        <input type="text" id="telefone-pet" required class = "input-boxes" />
+                    </div>
+
+                    <div>
+                        <label class = "input-text" >Alguma alergia ou cuidado especial?</label>
+                        <textarea rows="3" id = cuidados-pet class = "input-boxes" ></textarea>
+                    </div>
+
+                    <div>
+                        <label class = "input-text" >Escreva sobre o pet!</label>
+                        <textarea rows="5" id = "descricao-pet" class = "input-boxes" ></textarea>
+                    </div>
+
+                    <div>
+                        <div class = "input-text">Fotos do pet! (Coloque o URL da imagem)</div>
+                        <div>
+                            <textarea rows="5" id = "img-pet" class = "input-boxes" ></textarea>
+                            <!--<input type="file" class="form-control" id="img-pet"/>-->
+                        </div>
+                    </div>
+
+
+                    
+                </form>
+                    <input type="submit" value="Enviar" id ="submit" class = "subbut"/>
+                    <button class="btn-cadastro">
+                        <a href="paginicial.html" class="btn-cadastro-txt">Cancelar</a>
+                        </button>
+                        <button class="btn-cadastro">
+                            <a href="displaypets.html" class="btn-cadastro-txt">Mostrar pets</a> 
+                            </button>
+            </div>
+            
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    function ler_dados() {
+
+let strDados = localStorage.getItem('db');
+let objDados = {};
+
+if (strDados) {
+    objDados = JSON.parse(strDados);
+}
+else {
+    objDados = {
+        contatos: [
+        ]
+    }
+}
+
+return objDados;
+}
+
+
+function salvaDados(dados) { 
+localStorage.setItem('db', JSON.stringify(dados));
+alert("Cadastro feito!")
+}
+
+function incluirContato() {
+let objDados = ler_dados();
+
+
+let strNome = document.getElementById('nome-pet').value;
+let strEspecie = document.getElementById('especie-pet').value;
+let strNascimento = document.getElementById('nascimento-pet').value;
+let strRaca = document.getElementById('raca-pet').value;
+let strSexo = (document.getElementById('sexo-pet').value == 1)?"M":"F";
+let strEndereco = document.getElementById('endereco-pet').value;
+let strTelefone = document.getElementById('telefone-pet').value;
+let strCuidados = document.getElementById('cuidados-pet').value;
+let strDescricao = document.getElementById('descricao-pet').value;
+let strImg = document.getElementById("img-pet").value;
+
+let novoContato = {
+    nome: strNome,
+    especie: strEspecie,
+    nascimento: strNascimento,
+    raca: strRaca,
+    sexo: strSexo,
+    telefone: strTelefone,
+    endereco: strEndereco,
+    cuidados: strCuidados,
+    descricao: strDescricao,
+    img: strImg
+
+};
+objDados.contatos.push(novoContato);
+
+salvaDados(objDados);
+
+}
+document.getElementById("submit").addEventListener("click", incluirContato)
+</script>
+
+<style>
+    @font-face {
+    font-family: "Boogaloo";
+    src: url("assets\\font\\Boogaloo-Regular.ttf") format("truetype");
+}
+
+
+.btn-cadastro{
+    margin-bottom: 10%;
+    margin-left: 20%;
+  }
+  
+  .btn-cadastro-txt{
+    font-family: "Boogaloo";
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+  }
+
+body{
+    background-image: url("assets\\imgs\\bg.png");
+    background-color: #ffffcd;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+
+.top-col1{
+    width: auto;
+}
+
+.inputs{
+font-size: larger;
+}
+
+.input-text{
+    margin-top: 10%;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 50%;
+}
+
+.input-boxes{
+    width: 80%;
+    margin-left: 5%;
+    max-width: 370%;
+}
+
+.titulo-pag{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.col-md-4{
+    align-self: center;
+}
+
+.form-control{
+    margin-bottom: 8%;
+    margin-left: 5%;
+    max-width: 100%;
+}
+
+.form-select{
+    margin-left: 5%;
+}
+
+.subbut{
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 14%;
+    margin-bottom: 10%;
+}
+</style>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Doadores</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background-color: khaki;">
+
+    <div class="container">
+        <h1 style="font-size: medium;">Conheça o antigo lar do seu futuro pet</h1>
+        <div id="doadorCards" class="row"></div>
+        <p><a href="paginicial.html" class="btn btn-primary">Voltar</a></p>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+<script>
+    function leDados() {
+            return {
+                doador: [
+                    {
+                        nome: "Guilherme Benítez",
+                        petdoado: "Bnuy",
+                        história: "Bnuy foi um presente de aniversário que me deixou muito feliz, cuidei dele com muito amor por 3 meses mas infelizmente tenho sofrido fortes crises de alergia desde sua chegada, e descobri que é por causa do pelo. Espero que Bnuy posso encontrar outro lar que o ame tanto quanto eu que possa lhe dar o cuidado que merece.",
+                        comentário: "PS: Mantenha ele longe de gatos!! E não esqueça de comprar muita alface.",
+                        img: "assets/imgs/coelho.jpg"
+                    },
+                    {
+                        nome: "Clara Leal",
+                        petdoado: "Smelly",
+                        história: "Encontrei Smelly na rua dentro de uma caixa de papelão, provavelmente abandonado pelos antigos donos, levei no veterinário e forneci os cuidados que pude, mas não tenho condições de ter um animalzinho agora, espero que ele possa ser adotado por alguém que cuide bem dele e não o deixe se sentir abandonado novamente.",
+                        comentário: "PS: Ele é um gatinho muito medroso, mas quando se acostuma com você é muito carinhoso.",
+                        img: "assets/imgs/gato.jpg"
+                    },
+                    {
+                        nome: "Lucas Araujo",
+                        petdoado: "Cheetos",
+                        história: "Estou doando esse lindo e amoroso Cãozinho, até hoje criado com muito carinho por mim e minhas filhas, mas infelizmente agora que vivo sozinho não consigo mais lhe dar o cuidado necessário. Ele merece um novo lar que dê a ele a mesma atenção e amor que teve até hoje, onde possa fazer parte de uma família.",
+                        comentário: "PS: Ele gosta de carinho na barriga e de passear em parques com muitas árvores.",
+                        img: "assets/imgs/cach.jpg"
+                    }
+                ]
+            };
+        }
+
+        function imprime_dados() {
+            let objDados = leDados();
+            let doadorCardsContainer = document.getElementById('doadorCards');
+
+            objDados.doador.forEach((doador, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card', 'mb-3');
+                card.innerHTML = `
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="${doador.img}" class="img-fluid card-img-custom" alt="Imagem do ${doador.petdoado}">
+                        </div>
+                        <div class="col-8">
+                            <h5 class="card-title">${doador.nome}</h5>
+                            <p class="card-text"><strong>Pet Doador:</strong> ${doador.petdoado}</p>
+                            <p class="card-text"><strong>História:</strong> ${doador.história}</p>
+                            <p class="card-text"><strong>Comentário:</strong> ${doador.comentário}</p>
+                        </div>
+                    </div>
+                `;
+
+                doadorCardsContainer.appendChild(card);
+            });
+        }
+
+        imprime_dados();
+</script>
+
+<style>
+    #doadorCards{
+        max-width: 65rem;
+    }
+    .capsule-img {
+        width: 15rem;
+    }
+
+    .h6 {
+        font-weight: 100;
+    }
+    .card{
+    padding: 1vw;
+    margin: 3vw;
+    background-color: dodgerblue;
+   
+}
+
+.container{
+    display: flex;
+    padding: 1vw;
+    margin: 3vw;
+    font-size: larger;
+
+}
+
+
+
+.img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+}
+
+.titulo-pag{
+    font-style: italic;
+    color:dodgerblue;
+}
+</style>
+
+</html>

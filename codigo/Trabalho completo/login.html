@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idoog cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="center">
+    <div class="ear ear--left"></div>
+    <div class="ear ear--right"></div>
+    <div class="face">
+
+      <div class="eyes">
+        <div class="eye eye--left">
+          <div class="glow"></div>
+        </div>
+        <div class="eye eye--right">
+          <div class="glow"></div>
+        </div>
+      </div>
+      <div class="splorch-eye-r"></div>
+      <div class="splorch-eye-l"></div>
+
+      <div class="mouth">
+        <svg width="200" height="200">
+          <!--<circle class="mouth" cx="68" cy="80" r="35" />
+          <circle class="mouth" cx="135" cy="80" r="35" />-->
+          <path d="M48 80 Q80 120 100 80" />
+          <path d="M100 80 Q120 120 152 80" />
+
+        </svg>
+
+      </div>
+
+      <div class="nose">
+        <svg width="38.161" height="22.03">
+          <path
+            d="M2.017 10.987Q-.563 7.513.157 4.754C.877 1.994 2.976.135 6.164.093 16.4-.04 22.293-.022 32.048.093c3.501.042 5.48 2.081 6.02 4.661q.54 2.579-2.051 6.233-8.612 10.979-16.664 11.043-8.053.063-17.336-11.043z"
+            fill="#243946"></path>
+        </svg>
+        <div class="glow"></div>
+      </div>
+    </div>
+
+
+
+    <div class="login">
+      <h4 class = "login-title">Login</h4>
+      <form>
+        <div class="input_group" type="submit" value="Submit">
+          <label class="input-text">Usuário ou email</label><br>
+          <input type="text" id="usuario" class="input-boxes" required />
+        </div>
+        <div class="input_group" type="submit" value="Submit">
+          <label class="input-text">Senha</label><br>
+          <input type="text" id="senha" class="input-boxes" required />
+          <br>
+          <input type="submit" value="Fazer login" id ="submit" class = "subbut"/>
+        </div>
+
+
+      </form>
+
+      
+
+    </div>
+    <button class="btn-cadastro">
+    <a href="cadastrouser.html" class="btn-cadastro-txt">Fazer cadastro</a>
+    </button>
+  </div>
+
+  <script src="Script.js"></script>
+
+</body>
+
+</html>
+<script>
+    
+function ler_dados() {
+  let strDados = localStorage.getItem('db');
+  let objDados = {};
+
+  if (strDados) {
+      objDados = JSON.parse(strDados);
+  }
+  else {
+      objDados = {
+              Cadastros: [
+                  {
+                      "id":1,
+                      "usuario": "Usuario1",
+                      "senha": 1234
+                  },
+                  {
+                      "id":2,
+                      "usuario": "Usuario2",
+                      "senha": 2345
+                  },
+                  {
+                      "id":3,
+                      "usuario": "Usuario3",
+                      "senha": 4321
+                  },
+                  {
+                      "id":4,
+                      "usuario": "Usuario4",
+                      "senha": 9876
+                  }
+              ]
+      }
+  }
+
+  return objDados;
+}
+
+function fazer_login() {
+  let objDados = ler_dados();
+
+  let strUsuario = document.getElementById('usuario').value;
+  let strSenha = document.getElementById('senha').value;
+  let usuario_encontrado = false;
+  let senha_enoctrada = false;
+
+  for (let i = 0; i < objDados.Cadastros.length; i++) {
+    if (objDados.Cadastros[i].usuario === strUsuario) {
+      usuario_encontrado = true;
+      break;
+    }
+  }
+
+  for (let i = 0; i < objDados.Cadastros.length; i++) {
+    if (objDados.Cadastros[i].senha == strSenha) {
+      senha_enoctrada = true;
+      break;
+    }
+  }
+
+  if (usuario_encontrado) {
+    window.location.href = `paginicial.html`;
+  } else {
+    alert("Usuário nao encontrado!");
+  }
+
+  if (senha_enoctrada) {
+    alert("Logando!");
+    
+  } else {
+    alert("Senha nao encontrada!");
+    window.location.href = `login.html`;
+  }
+}
+
+document.getElementById("submit").addEventListener("click", fazer_login);
+</script>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Boogaloo";
+  src: url("Assets\\font\\Boogaloo-Regular.ttf") format("truetype");
+}
+
+.btn-cadastro{
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.btn-cadastro-txt{
+  font-family: "Boogaloo";
+  font-size: larger;
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  font-family: "Boogaloo";
+  text-align: center;
+  font-size: x-large;
+}
+
+.login-title{
+  font-family: "Boogaloo";
+  text-align: center;
+  font-size: xx-large;
+  margin-top: -10%;
+  margin-bottom: 5%;
+}
+.subbut{
+  margin-top: 10%;
+  width: 70%;
+  height: auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 12px;
+  background-image: url("Assets\\Images\\bg.png");
+}
+
+.mouth {
+  fill: none;
+  stroke: #243946;
+  stroke-width: 5px;
+  position: absolute;
+}
+
+
+.splorch-eye-r {
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(to top right, #8f8f1a, #b6b62e);
+  border-radius: 50%;
+  position: absolute;
+  margin-right: -110px;
+  margin-top: -7px;
+  z-index: -1;
+}
+
+.splorch-eye-l {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 110px;
+  margin-top: -7px;
+  z-index: -1;
+  background-image: linear-gradient(to top right, #8f8f1a, #b6b62e);
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 275px;
+  height: 490px;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: linear-gradient(to top right, #e9e5d8, #dedecf);
+}
+
+
+@media screen and (max-height: 500px) {
+  .center {
+    transition: transform 0.5s;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+
+.center .ear {
+  position: absolute;
+  top: -110px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background-color: #b67d26;
+}
+
+.center .ear.ear--left {
+  left: -135px;
+}
+
+.center .ear.ear--right {
+  right: -135px;
+}
+
+.center .face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  margin: 80px auto 10px;
+  --rotate-head: 0deg;
+  transform: rotate(var(--rotate-head));
+  transition: transform 0.2s;
+  transform-origin: center 20px;
+}
+
+.center .eye {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #1b2b34;
+}
+
+.center .eye.eye--left {
+  margin-right: 40px;
+}
+
+.center .eye.eye--right {
+  margin-left: 40px;
+}
+
+.center .eye .glow {
+  position: relative;
+  top: 3px;
+  right: -12px;
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: rotate(38deg);
+}
+
+.center .nose {
+  position: relative;
+  top: 30px;
+  transform: scale(1.1);
+}
+
+.center .nose .glow {
+  position: absolute;
+  top: 3px;
+  left: 32%;
+  width: 15px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #476375;
+}
+</style>

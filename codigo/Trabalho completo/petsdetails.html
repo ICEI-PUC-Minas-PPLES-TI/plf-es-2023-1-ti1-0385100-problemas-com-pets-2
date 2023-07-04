@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 30rem;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            font-size: large;
+        }
+
+        .card img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Detalhes do Pet</title>
+</head>
+<body>
+    <div class="card">
+        <div id="descricaoPet"></div>
+    </div>
+
+    <script>
+        window.addEventListener("load", exibirDetalhesPet);
+
+        async function exibirDetalhesPet() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const petId = urlParams.get('id');
+
+            const pet = await obterPetPorId(petId);
+
+            if (pet) {
+                const descricaoPetDiv = document.getElementById('descricaoPet');
+                descricaoPetDiv.innerHTML = `
+                    <h2>${pet.nome}</h2>
+                    <p><strong>Idade:</strong> ${pet.idade}</p>
+                    <p><strong>Cidade:</strong> ${pet.cidade}</p>
+                    <p><strong>Espécie:</strong> ${pet.especie}</p>
+                    <p><strong>Raça:</strong> ${pet.raça}</p>
+                    <img src="${pet.imagem}" alt="Imagem do ${pet.nome}">
+                    <p><strong>Data de Nascimento:</strong> ${pet.data_nascimento}</p>
+                    <p><strong>Detalhes:</strong> ${pet.detalhes.join(', ')}</p>
+                    <p><strong>Descrição:</strong> ${pet.descrição}</p>
+                    <p><a href="displaypets.html" class="btn btn-primary">Ver outros</a></p>
+
+                `;
+            }
+        }
+
+        async function obterPetPorId(petId) {
+            const response = await fetch('dados.json');
+            const data = await response.json();
+
+            const pet = data.animal.find(pet => pet.id === parseInt(petId));
+
+            return pet;
+        }
+    </script>
+</body>
+</html>
+
+
+

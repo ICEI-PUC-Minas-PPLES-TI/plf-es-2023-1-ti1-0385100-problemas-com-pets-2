@@ -1,0 +1,99 @@
+{
+    "animal": [
+      {
+        "id": 1,
+        "nome": "Rex",
+        "idade": "Adulto",
+        "cidade": "Belo Horizonte",
+        "especie": "cachorro",
+        "raça": "Labrador Retriever",
+        "imagem": "assets\\imgs\\labrador.png",
+        "data_nascimento": "04/06/2013",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "Rex é muito brincalhão e adora correr no parque."
+      },
+      {
+        "id": 2,
+        "nome": "Luna",
+        "idade": "Adulto",
+        "cidade": "Belo Horizonte",
+        "especie": "cachorro",
+        "raça": "Golden Retriever",
+        "imagem": "assets\\imgs\\golden.png",
+        "data_nascimento": "10/05/2018",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "Luna é uma cachorra de olhos brilhantes. Ela é muito amigável e adora receber carinho."
+      },
+      
+      {
+        "id": 3,
+        "nome": "Max",
+        "idade": "Adulto",
+        "cidade": "Belo Horizonte",
+        "especie": "cachorro",
+        "raça": "Husky Siberiano",
+        "imagem": "assets\\imgs\\Husky.png",
+        "data_nascimento": "10/03/2021",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "Max é um cachorro com pelagem preta e focinho marcante. Ele é inteligente e adora aprender novos truques."
+      },
+      {
+        "id": 4,
+        "nome": "Bnuy",
+        "idade": "Adulto",
+        "cidade": "Belo Horizonte",
+        "especie": "coelho",
+        "raça": "Holland Lop",
+        "imagem": "assets\\buny.jpg",
+        "data_nascimento": "10/03/2021",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "Bnuy é um coelho branco de orelhas cinza, ele ama alface e tem medo de gatos"
+      },
+      {
+        "id": 5,
+        "nome": "Smelly",
+        "idade": "Adulto",
+        "cidade": "Belo Horizonte",
+        "especie": "Gato",
+        "raça": "SRD",
+        "imagem": "assets\\smelly.jpg",
+        "data_nascimento": "21/08/2022",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "Smelly é um gato laranja que gosta de sair, cuidado, ele não é bom com crianças"
+      },
+      {
+        "id": 6,
+        "nome": "Cheetos",
+        "idade": "Filhote",
+        "cidade": "Belo Horizonte",
+        "especie": "Cachorro",
+        "raça": "Terrier brasileiro",
+        "imagem": "assets\\cheetos.jpg",
+        "data_nascimento": "17/03/2020",
+        "detalhes": [
+          "vacinado",
+          "castrado"
+        ],
+        "descrição": "O Cheetos gosta de ficar dentro de casa mas morre de medo de aspirador"
+      }
+    ]
+  }
+  
+
+  
+    

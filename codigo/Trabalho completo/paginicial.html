@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idoog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="estilo.css">
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-yellow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="formularioAdocao.html">ADOTE JÁ!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Página Principal</a>
+          <a class="nav-link" href="displaypets.html">Nossos Pets</a>
+          <a class="nav-link" href="doadores.html">Nossos Doadoes</a>
+          <a class="nav-link" href="login.html">Login</a> <!-- Botão de Login -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="carousel">
+    <div class="slides"></div>
+    <a class="prev" onclick="prevSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+  </div>
+
+  <script>
+    fetch('dados.json').then((response) => {
+      response.json().then((data) => {
+        const slidesContainer = document.querySelector('.slides');
+        let slidesIndex = 0;
+        let timer;
+
+        data.animal.forEach((animal) => {
+          const slide = document.createElement('div');
+          slide.classList.add('slide');
+          slide.innerHTML = `
+            <img src="${animal.imagem}" alt="${animal.nome}" class="img-responsive">
+            <h3>${animal.nome}</h3>
+          `;
+          slidesContainer.appendChild(slide);
+        });
+
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        showSlide(slidesIndex);
+
+        function showSlide(index) {
+          if (index >= totalSlides) {
+            index = 0;
+          } else if (index < 0) {
+            index = totalSlides - 1;
+          }
+
+          slides.forEach((slide) => {
+            slide.style.display = 'none';
+          });
+
+          slides[index].style.display = 'block';
+          slidesIndex = index;
+
+          const prevButton = document.querySelector('.prev');
+          const nextButton = document.querySelector('.next');
+
+          prevButton.style.top = `${slides[index].clientHeight / 2}px`;
+          nextButton.style.top = `${slides[index].clientHeight / 2}px`;
+        }
+
+        function prevSlide() {
+          showSlide(slidesIndex - 1);
+          clearInterval(timer);
+        }
+
+        function nextSlide() {
+          showSlide(slidesIndex + 1);
+          clearInterval(timer);
+        }
+
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        prevButton.addEventListener('click', () => {
+          prevSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+          nextSlide();
+        });
+
+        function startTimer() {
+          timer = setInterval(() => {
+            nextSlide();
+          }, 5000);
+        }
+
+        startTimer();
+
+        window.addEventListener('resize', () => {
+          showSlide(slidesIndex);
+        });
+      });
+    });
+  </script>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6" id="animalCards"></div>
+      <div class="col-md-6 col-lg-6 order-md-last" id="ongCards">
+        <div class="cards">
+          <h2>Avaliações</h2>
+          <div>
+            <label for="ongSelect">Qual Ong deseja avaliar:</label>
+            <select id="ongSelect">
+              <option value="ong1">Casa Mia</option>
+              <option value="ong2">Projeto Cãomer</option>
+              <option value="ong3">Casa dos Anjos</option>
+            </select>
+          </div>
+          <textarea id="commentBox" class="comment-box"></textarea>
+          <br>
+          <button onclick="enviarComentario()" class="button">Enviar</button>
+          <button onclick="verComentarios()" class="button">Ver Comentários</button>
+        </div>
+        <div class="card">
+          <h2>Caixa de Sugestões</h2>
+          <form id="suggestion-form">
+            <div class="form-group">
+              <label for="name">Nome:</label>
+              <input type="text" class="form-control" id="name" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="suggestion">Sugestão:</label>
+              <textarea class="form-control" id="suggestion" rows="3" placeholder="Digite sua sugestão"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+          <ul id="suggestion-list" class="suggestion-list"></ul>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    fetch('dados.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        const animalCardsContainer = document.getElementById('animalCards');
+        const maxCards = 4;
+        const randomAnimals = getRandomElements(data.animal, maxCards);
+
+        randomAnimals.forEach(animal => {
+          const card = document.createElement('div');
+          card.classList.add('card', 'mb-3');
+          card.innerHTML = `
+                        <img src="${animal.imagem}" class="card-img-top img-fluid card-img-custom" alt="Imagem do ${animal.nome}">
+                        <div class="card-body">
+                            <h5 class="card-title">${animal.nome}</h5>
+                            <p class="card-text">Espécie: ${animal.especie}</p>
+                            <p class="card-text">Raça: ${animal.raça}</p>
+                            <a href="petsdetails.html?id=${animal.id}" class="btn btn-primary">Me conheça!</a>
+                        </div>
+                    `;
+
+          animalCardsContainer.appendChild(card);
+        });
+      });
+
+    function getRandomElements(array, maxElements) {
+      const shuffledArray = array.sort(() => 0.5 - Math.random());
+      return shuffledArray.slice(0, maxElements);
+    }
+
+    var ongCardsContainer = document.getElementById("ongCards");
+
+    var ongCards = [
+      {
+        image: "assets/imgs/CasaMia.jpg",
+        title: "Casa Mia",
+        description: "A CASA MIA começou a funcionar em fevereiro de 2019, no apartamento de Saskia",
+        button: "Veja Mais",
+        link: "https://casamiabh.com.br",
+      },
+      {
+        image: "assets/imgs/Caomer.jpg",
+        title: "Projeto Cãomer",
+        description: "O Projeto Cãomer foi iniciado no ano de 2015 por uma moradora do bairro Jardim Canadá.",
+        button: "Veja Mais",
+        link: "https://projetocaomer.com.br/"
+      },
+      {
+        image: "assets/imgs/Casadosanjos.jpg",
+        title: "Casa dos Anjos",
+        description: "A Casa dos Anjos é uma organização de proteção animal fundada em 2012 em Macaé, RJ.",
+        button: "Veja Mais",
+        link: "https://casadosanjos.netlify.app/",
+      },
+    ];
+
+    ongCards.forEach((card) => {
+      var cardElement = document.createElement("div");
+      var imageElement = document.createElement("img");
+      var bodyElement = document.createElement("div");
+      var titleElement = document.createElement("h5");
+      var textElement = document.createElement("p");
+      var buttonElement = document.createElement("a");
+
+      cardElement.classList.add("card", "mb-3");
+      imageElement.setAttribute("src", card.image);
+      imageElement.classList.add("card-img-top");
+      bodyElement.classList.add("card-body");
+      titleElement.classList.add("card-title");
+      textElement.classList.add("card-text");
+      buttonElement.classList.add("btn", "btn-primary");
+
+      titleElement.textContent = card.title;
+      textElement.textContent = card.description;
+      buttonElement.textContent = card.button;
+      buttonElement.href = card.link;
+
+      bodyElement.appendChild(titleElement);
+      bodyElement.appendChild(textElement);
+      bodyElement.appendChild(buttonElement);
+      cardElement.appendChild(imageElement);
+      cardElement.appendChild(bodyElement);
+
+      ongCardsContainer.appendChild(cardElement);
+    });
+
+    function getRandomElements(array, maxElements) {
+      const shuffledArray = array.sort(() => 0.5 - Math.random());
+      return shuffledArray.slice(0, maxElements);
+    }
+  </script>
+
+
+  <script>
+    function enviarComentario() {
+      var comment = document.getElementById("commentBox").value;
+      var ongSelect = document.getElementById("ongSelect");
+      var ongName = ongSelect.options[ongSelect.selectedIndex].text;
+
+      var commentWithOng = ongName + ": " + comment;
+      var comments = localStorage.getItem("comments");
+      comments = comments ? JSON.parse(comments) : [];
+
+      comments.push(commentWithOng);
+
+      localStorage.setItem("comments", JSON.stringify(comments));
+
+      alert("Comentário enviado");
+
+      document.getElementById("commentBox").value = "";
+    }
+
+
+    window.addEventListener('DOMContentLoaded', function () {
+      var commentsContainer = document.getElementById('commentsContainer');
+
+      // Recupera os comentários do localStorage
+      var comments = localStorage.getItem("comments");
+      comments = comments ? JSON.parse(comments) : [];
+
+      for (var i = 0; i < comments.length; i++) {
+        var card = createCard(comments[i]);
+        commentsContainer.appendChild(card);
+      }
+
+      function createCard(comment) {
+        var card = document.createElement('div');
+        card.classList.add('card');
+
+        var commentElement = document.createElement('p');
+        commentElement.textContent = comment;
+
+        card.appendChild(commentElement);
+
+        return card;
+      }
+    });
+
+    function verComentarios() {
+      window.location.href = "ver_comentarios.html";
+    }
+  </script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+
+      $('#suggestion-form').submit(function (event) {
+        event.preventDefault();
+
+        var name = $('#name').val();
+        var suggestion = $('#suggestion').val();
+
+        if (name.trim() === '' || suggestion.trim() === '') {
+          alert('Por favor, preencha todos os campos.');
+          return;
+        }
+
+        var suggestionObject = {
+          name: name,
+          suggestion: suggestion
+        };
+
+        storeSuggestion(suggestionObject);
+
+        $('#name').val('');
+        $('#suggestion').val('');
+
+        addSuggestionToList(suggestionObject);
+      });
+
+      loadSuggestions();
+
+      function storeSuggestion(suggestion) {
+        var suggestions = localStorage.getItem('suggestions');
+
+        if (suggestions) {
+          suggestions = JSON.parse(suggestions);
+        } else {
+          suggestions = [];
+        }
+
+        suggestions.push(suggestion);
+        localStorage.setItem('suggestions', JSON.stringify(suggestions));
+      }
+
+      function loadSuggestions() {
+        var suggestions = localStorage.getItem('suggestions');
+
+        if (suggestions) {
+          suggestions = JSON.parse(suggestions);
+
+          for (var i = 0; i < suggestions.length; i++) {
+            addSuggestionToList(suggestions[i]);
+          }
+        }
+      }
+    });
+  </script>
+
+<footer>
+  <footer class="footer">
+    <footer class="footer bg-lightgrey">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-4">
+            <h4>Redes sociais</h4>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><img class="logo-img" src="assets//imgs//1.jpeg"></a></li>
+              <li class="list-inline-item"><a href="#"><img class="logo-img" src="assets//imgs//2.jpeg"></a></li>
+              <li class="list-inline-item"><a href="#"><img class="logo-img" src="assets//imgs//3.jpeg"></a></li>
+              <li class="list-inline-item"><a href="#"><img class="logo-img" src="assets//imgs//4.jpeg"></a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Links rapidos</h4>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Ajuda<br></i></a></li>
+              <li class="list-inline-item"><a href="#">Cancelamento<br></i></a></li>
+              <li class="list-inline-item"><a href="#">Politicas de privacidade<br></i></a></li>
+              <li class="list-inline-item"><a href="#">FAQ<br></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Contato</h4>
+            <ul class="list-unstyled">
+              <li>E-mail: [@gmail.com]</li>
+              <li>Telefone: [+55 31 91111-1111]</li>
+              <li>Endereço: [Savassi]</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="text-center">&copy; 2023 IDOOG Eng. de software</p>
+      </div>
+    </footer>
+    </footer>
+
+</body>
+
+</html>

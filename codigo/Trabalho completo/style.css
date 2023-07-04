@@ -1,0 +1,190 @@
+
+
+/* cards cachorros */ 
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 12px;
+    background-image: url("assets\\imgs\\bg.png");
+    background-color: #f7f3d4;
+  }
+
+  .card-img-topp {
+    height: 200px; 
+    object-fit: cover; 
+  }
+
+  .card-img-custom {
+    width: 300px;
+    height: auto;
+  }
+
+/* cards ongs */
+
+body{
+    font-family: Arial, sans-serif;
+    background-image: url("img/bg.png")
+}
+
+h1{
+margin-left: 10px;
+}
+
+.card {
+    background-color: #F0E68C;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-bottom: 1rem;
+    width: 250px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+  .card img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding-right:10px;
+  }
+  .card-title {
+    font-size: 20px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+ 
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn {
+    border: none;
+    font-size: 0.8rem;
+    background-color: darkslategray;
+    color: #fff;
+    float: right;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+
+  #ongCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn:hover {
+    background-color: gainsboro;
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* comentarios */
+
+  .suggestion-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.suggestion-list li {
+    margin-bottom: 10px;
+}
+
+
+.containerr {
+    max-width: 20rem;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto; 
+    text-align: center; 
+    background-color: khaki; 
+}
+
+h2 {
+    font-size: 24px; 
+}
+
+.navbar-yellow {
+  background-color: rgb(240, 240, 106);
+}
+.navbar-brand{
+  background-color: blue;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: antiquewhite;
+  font-size: small;
+
+}
+
+.nav-link{
+  font-size: medium;
+}
+
+.cards {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(241, 241, 119);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.comment-box {
+      width: 17rem;
+      height: 120px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background-color: gainsboro;
+  color: black;
+  cursor: pointer;
+}
+
+h2{
+  text-align: center;
+}
+
+#ongSelect{
+  margin-bottom: 10px;
+}
+
+#animalCards{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.row{
+  margin-top: 20px
+}
+.suggestion-box {
+  position: relative;
+  top: 10px;
+}
+.review-box {
+  position: relative;
+  top: 10px;
+}
+.footer {
+ 
+  padding: 20px;
+  width: 100%;
+background-color: lightgrey;
+}
+.logo-img{
+  width: 2rem;
+}
+.cards{
+  background-color: khaki;
+}
+.extras{
+  margin-left: 12rem;
+}
